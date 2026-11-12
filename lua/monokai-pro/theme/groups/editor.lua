@@ -26,19 +26,14 @@ return {
       },
 
       -- Diff highlights
-      DiffAdd = {
-        bg = scheme.diffEditor.insertedLineBackground,
-        fg = scheme.diffEditorOverview.insertedForeground,
-      },
-      DiffChange = {
-        bg = scheme.diffEditor.modifiedLineBackground,
-        fg = scheme.diffEditorOverview.modifiedForeground,
-      },
+      -- No fg so syntax highlighting is preserved on diff lines
+      DiffAdd = { bg = scheme.diffEditor.insertedLineBackground },
+      DiffChange = { bg = scheme.diffEditor.modifiedLineBackground },
       DiffDelete = {
         bg = scheme.diffEditor.removedLineBackground,
         fg = scheme.diffEditorOverview.removedForeground,
       },
-      DiffText = { bg = scheme.editor.background, fg = scheme.editor.foreground },
+      DiffText = { bg = scheme.diffEditor.modifiedTextBackground },
 
       -- Buffer end and errors
       EndOfBuffer = { fg = scheme.editor.background },

@@ -127,6 +127,7 @@
 ---@field insertedLineBackground string
 ---@field removedLineBackground string
 ---@field modifiedLineBackground string
+---@field modifiedTextBackground string
 
 ---@class MonokaiPro.Scheme.DiffEditorOverview
 ---@field insertedForeground string
@@ -370,6 +371,7 @@ function M.build(palette, config)
     insertedLineBackground = colors.blend(p.accent4, 0.1, p.dark1),
     removedLineBackground = colors.blend(p.accent1, 0.1, p.dark1),
     modifiedLineBackground = colors.blend(p.accent2, 0.1, p.dark1),
+    modifiedTextBackground = colors.blend(p.accent2, 0.25, p.dark1),
   }
 
   scheme.diffEditorOverview = {
